@@ -35,7 +35,7 @@ public class Start {
 			else
 			{
 				System.out.println("Okay, lets start the game!");
-				Test.DifficultyE();
+				Solo.SoloFun();
 			}
 		}
 		else
