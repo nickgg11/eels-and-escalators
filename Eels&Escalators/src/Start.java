@@ -13,7 +13,6 @@ public class Start {
 		if(Friends.equalsIgnoreCase("No"))
 		{
 			System.out.println("Would you like to play with AI?");
-			in.nextLine();
 			AI=in.nextLine();
 			if (AI.equalsIgnoreCase("Yes"))
 			{
