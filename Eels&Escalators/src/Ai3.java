@@ -1,8 +1,10 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Solo {
-	public static void SoloFun(){
+public class Ai3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		Scanner in=new Scanner(System.in);
 		System.out.println("Okay now there are two modes please choose one \n normal \n special");
 		String type=in.nextLine();
@@ -10,8 +12,14 @@ public class Solo {
 		{
 			//Var
 			int playerposition=1;
+			int ai1pos=0;
+			int ai2pos=0;
+			int ai3pos=0;
 			Random rnd=new Random();
-			int move=0;
+			int movep=0;
+			int moveai1=0;
+			int moveai2=0;
+			int moveai3=0;
 			//Eels & Escalators
 			int ladder1= rnd.nextInt(3-3+1)+3;
 			int ladder2= rnd.nextInt(30-21+1)+21;
@@ -24,11 +32,20 @@ public class Solo {
 				in.nextLine();
 				int dice1= rnd.nextInt(6-1+1)+1;
 				int dice2= rnd.nextInt(6-1+1)+1;
-				move=dice1+dice2;
-				playerposition=playerposition+move;
+				int diceai1= rnd.nextInt(6-1+1)+1;
+				int diceai2= rnd.nextInt(6-1+1)+1;
+				int diceai3= rnd.nextInt(6-1+1)+1;
+				int diceai4= rnd.nextInt(6-1+1)+1;
+				int diceai5= rnd.nextInt(6-1+1)+1;
+				int diceai6= rnd.nextInt(6-1+1)+1;
+				movep=dice1+dice2;
+				moveai1=diceai1+diceai2;
+				moveai2=diceai3+diceai4;
+				moveai3=diceai5+diceai6;
+				playerposition=playerposition+movep;
 				if (playerposition==99)
 				{
-					System.out.println("Your role was "+move+".");
+					System.out.println("Your role was "+movep+"and the rolls of the first second and third Ai in their respective order."+moveai1);
 					playerposition=playerposition-20;
 					System.out.println("Your position is 79.");
 				}
@@ -121,12 +138,11 @@ public class Solo {
 					System.out.println("Your role was "+move+".");
 					playerposition=playerposition+70;
 				}
-				
+
 			}
 			System.out.println("Congratulations you won!");
 		}
 	}
 }
-
 
 
