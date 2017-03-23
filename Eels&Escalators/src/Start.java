@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Start {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner in=new Scanner(System.in);
 		String AI;
 		String Friends;
@@ -20,7 +19,7 @@ public class Start {
 				int AIcount = in.nextInt();
 				if (AIcount==3)
 				{
-
+				Ai3.Ai3Fun();
 				}
 				else if (AIcount==2)
 				{
