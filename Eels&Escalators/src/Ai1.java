@@ -138,7 +138,7 @@ public class Ai1
 
 					}
 				}
-				else if (playerposition==ladder1||ai1pos==ladder1||playerposition==ladder3||ai1pos==ladder3||playerposition==ladder2||ai1pos==ladder2)
+				else if (playerposition==ladder1||ai1pos==ladder1||playerposition==ladder3||ai1pos==ladder3||playerposition==ladder2||ai1pos==ladder4||ai1pos==ladder5||ai1pos==ladder6||ai1pos==ladder7||playerposition==ladder4||playerposition==ladder5||playerposition==ladder6||playerposition==ladder7)
 				{
 					System.out.println("Your role was "+movep+"and the rolls of the first second and third Ai in their respective order."+moveai1+".");
 					if (turn==1){

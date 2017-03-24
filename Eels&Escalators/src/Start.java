@@ -39,6 +39,7 @@ public class Start {
 		else
 		{
 			System.out.println("Okay you will be playing with one other friend, lets begin.");
+			twoplayer.twoplayerfun();
 		}
 	}
 
