@@ -25,6 +25,14 @@ public class twoplayer {
 			int snake2= rnd.nextInt(70-61+1)+61;
 			while (playerposition<=100&&secondplayer<=100)
 			{
+				if (turn==1)
+				{
+					System.out.println("It's player ones turn,please roll.");
+				}
+				else
+				{
+					System.out.println("it's player twos turn, please roll");
+				}
 				System.out.println("Okay lets roll!");
 				in.nextLine();
 				int dice1= rnd.nextInt(6-1+1)+1;
