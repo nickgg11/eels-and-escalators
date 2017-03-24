@@ -8,6 +8,7 @@ public class Ai3 {
 		System.out.println("Okay now there are two modes please choose one \n normal \n special");
 		String type=in.nextLine();
 		//Var
+		int turn=1;
 		int playerposition=1;
 		int ai1pos=0;
 		int ai2pos=0;
@@ -49,20 +50,30 @@ public class Ai3 {
 				ai3pos=ai3pos+moveai3;
 				if (playerposition==99||ai1pos==99||ai2pos==99||ai3pos==99)
 				{
-					System.out.println("Your role was "+movep+"and the rolls of the first second and third Ai in their respective order."+moveai1+","+moveai2+","+moveai3);
-					playerposition=playerposition-20;
-					System.out.println("Your position is 79.");
-				}
-				else if (playerposition==snake1||ai1pos==snake1||ai2pos==snake1||ai3pos==snake1)
-				{
-					System.out.println("Your role was "+movep+"and the rolls of the first second and third Ai in their respective order."+moveai1+","+moveai2+","+moveai3);
-					playerposition=playerposition-20;
-					System.out.println("Your positon is "+playerposition+".");
-					if (playerposition<1){
-						playerposition=1;
+					System.out.println("Your role was "+movep+"and the rolls of the first second and third Ai in their respective order."+moveai1+".");
+					System.out.println("A snake has been hit");
+					if (turn==1){
+						playerposition=playerposition-20;
+						System.out.println("You hit he snake so now your position is now 79.");
 					}
+					else if (turn==2)
+					{
+						ai1pos=ai1pos-20;
+						System.out.println("The bot hit the snake so its position is now 79.");
+					}
+					else if (turn==3)
+					{
+						ai2pos=ai2pos-20;
+						System.out.println("The bot hit the snake so its position is now 79.");
+					}
+					else if (turn==4)
+					{
+						ai3pos=ai3pos-20;
+						System.out.println("The bot hit the snake so its position is now 79.");
+					}
+
 				}
-				else if (playerposition==snake2||ai1pos==snake2||ai2pos==snake2||ai3pos==snake2)
+				else if (playerposition==snake2||ai1pos==snake2||ai2pos==snake2||ai3pos==snake2||playerposition==snake1||ai1pos==snake1||ai2pos==snake1||ai3pos==snake1)
 				{
 					System.out.println("Your role was "+movep+"and the rolls of the first second and third Ai in their respective order."+moveai1+","+moveai2+","+moveai3);
 					playerposition=playerposition-20;
@@ -92,6 +103,22 @@ public class Ai3 {
 				else 
 				{
 					System.out.println("Your role was "+movep+" and your position is "+playerposition+", the positions of the AI are "+ai1pos+","+ai2pos+","+ai3pos+".");
+				}
+				if (turn==1)
+				{
+					turn=2;
+				}
+				else if (turn==2)
+				{
+					turn=3;
+				}
+				else if (turn==3)
+				{
+					turn=4;
+				}
+				else if (turn==4)
+				{
+					turn=1;
 				}
 			}
 			System.out.println("The game is over!");

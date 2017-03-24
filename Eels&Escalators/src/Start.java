@@ -23,11 +23,11 @@ public class Start {
 				}
 				else if (AIcount==2)
 				{
-
+				Ai2.Ai2Fun();
 				}
 				else if (AIcount==1)
 				{
-
+				Ai1.Ai1Fun();
 				}
 			}
 			else
